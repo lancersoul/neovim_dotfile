@@ -17,5 +17,6 @@ return{
 			'mason'
 		},
 	}
+		vim.opt.showmode = false
 end,
 }
