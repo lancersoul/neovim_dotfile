@@ -17,6 +17,7 @@ maps('n', 'gd', vim.lsp.buf.definition, opt)
 maps("n", "<leader>f", function()
 vim.lsp.buf.format({ async = true })
 end, opt)
+maps('n', '<leader>r', vim.lsp.buf.rename, opt)
 --设置terminal模式下的快捷键
 map('t', '<C-b>', '<Cmd>ToggleTerm<CR>', opt)
 map('t', '<ESC>', '<C-\\><C-n>', opt)

@@ -21,6 +21,7 @@ vim.g.completeopt = "menu,menuone,noselect,noinsert"
 vim.o.pumheight = 10
 ---使用系统剪切板
 vim.o.clipboard = 'unnamedplus'
+vim.o.termguicolors = true
 ---导入lazy.nvim
 require("config.lazy")
 require("colorscheme")
