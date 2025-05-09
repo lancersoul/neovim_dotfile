@@ -1,6 +1,10 @@
 return {
     "mason-org/mason.nvim",
     event = "VeryLazy",
+	dependencies = {
+		"neovim/nvim-lspconfig",
+        "mason-org/mason-lspconfig.nvim",
+	},
     opts = {
 		ui = {
 			icons = {
@@ -9,10 +13,6 @@ return {
 				package_uninstalled = "✗"
 			},
 		},
-	},
-	dependencies = {
-		"neovim/nvim-lspconfig",
-        "mason-org/mason-lspconfig.nvim",
 	},
     config = function (_, opts)
         require("mason").setup(opts)
@@ -27,6 +27,7 @@ return {
 			local lsp = require("mason-lspconfig").get_mappings().package_to_lspconfig[name]
 			config.capabilities = require("blink.cmp").get_lsp_capabilities()
 			require("lspconfig")[lsp].setup(config)
+			-- vim.lsp.config(lsp, config)
 		end
 
 		local servers = {
@@ -68,6 +69,7 @@ return {
 			["python-lsp-server"] = {},
 			["bash-language-server"] = {},
 			["cmake-language-server"] = {},
+			-- ["pyright"] = {},
 		}
 
 		for server, config in pairs(servers) do
