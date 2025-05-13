@@ -10,7 +10,7 @@ return {
 		bigfile = { enabled = true },
 		dashboard = { enabled = true },
 		explorer = {
-			replace_netrw = true
+			enabled = false
 		},
 		indent = { enabled = false },
 		image = {},

@@ -34,6 +34,7 @@ return {
 		completion = {
 			documentation = {
 				auto_show = true,
+				window = { border = 'rounded' },
 			},
 			keyword = { range = 'full' },
 			menu = {
@@ -44,7 +45,8 @@ return {
 						{ "label", "label_description", gap = 2 },
 						{ "kind" }
 					},
-				}
+				},
+				border = 'rounded',
 			},
 			list = {
 				selection = {preselect = false, auto_insert = true}
